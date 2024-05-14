@@ -30,6 +30,7 @@
         }
         .hero h1 {
             font-size: 3rem;
+            padding: 0 20px;
         }
         .container {
             width: 80%;
@@ -38,6 +39,8 @@
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin-top: -50px;
+            position: relative;
+            z-index: 1;
         }
         h1, h2 {
             color: #333;
@@ -45,12 +48,12 @@
         p {
             line-height: 1.6;
         }
-        .services {
+        .services, .testimonials {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
         }
-        .service {
+        .service, .testimonial {
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 5px;
@@ -78,7 +81,6 @@
             padding: 10px 0;
             position: relative;
             width: 100%;
-            bottom: 0;
             margin-top: 20px;
         }
         .social-icons {
@@ -88,6 +90,31 @@
             margin: 0 10px;
             color: white;
             text-decoration: none;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form label {
+            margin: 10px 0 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -108,18 +135,47 @@
             <div class="services">
                 <div class="service">
                     <h2>Chatbot Entwicklung</h2>
-                    <p>Wir entwickeln intelligente Chatbots, die Ihre Kunden rund um die Uhr unterstützen und Ihre Geschäftsprozesse automatisieren.</p>
+                    <p>Wir entwickeln intelligente Chatbots, die Ihre Kunden rund um die Uhr unterstützen und Ihre Geschäftsprozesse automatisieren. Unsere Chatbots sind individuell angepasst und auf die Bedürfnisse Ihres Unternehmens zugeschnitten.</p>
                 </div>
                 <div class="service">
                     <h2>Marketing Strategien</h2>
-                    <p>Wir erstellen effektive Marketingstrategien, um Ihre Marke zu stärken und neue Kunden zu gewinnen.</p>
+                    <p>Wir erstellen effektive Marketingstrategien, um Ihre Marke zu stärken und neue Kunden zu gewinnen. Wir nutzen die neuesten Technologien und Techniken, um sicherzustellen, dass Ihre Botschaft die richtige Zielgruppe erreicht.</p>
                 </div>
                 <div class="service">
                     <h2>Beratung und Implementierung</h2>
-                    <p>Unsere Experten beraten Sie umfassend und helfen bei der Implementierung der besten Lösungen für Ihr Unternehmen.</p>
+                    <p>Unsere Experten beraten Sie umfassend und helfen bei der Implementierung der besten Lösungen für Ihr Unternehmen. Von der Planung bis zur Umsetzung unterstützen wir Sie in jedem Schritt.</p>
                 </div>
             </div>
             <a href="#" class="cta">Kontaktiere Uns Jetzt</a>
+        </section>
+        <section>
+            <h1>Was Unsere Kunden Sagen</h1>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Die Chatbots haben unsere Kundenkommunikation revolutioniert. Der Service war professionell und effizient."</p>
+                    <p>- Maria Schmidt, Immobilienmaklerin</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Dank der Marketingstrategien konnten wir unsere Online-Präsenz deutlich verbessern und neue Kunden gewinnen."</p>
+                    <p>- Peter Müller, Brillengeschäft-Besitzer</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Die Beratung und Implementierung waren erstklassig. Unser Geschäft läuft jetzt reibungsloser als je zuvor."</p>
+                    <p>- Lisa Meier, Fahrradverleih-Betreiberin</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Kontaktiere Uns</h1>
+            <form class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Absenden</button>
+            </form>
         </section>
     </div>
     <footer>
